@@ -10,9 +10,12 @@
  margin:0;
  padding:0;
  box-sizing: border-box;
- color: var(--gray);
-}
 
+ font-size: 14px;
+}
+:root{
+    color: var(--gray);
+}
 .container{
     max-width: 1024px;
     margin: auto;
@@ -69,6 +72,7 @@
 
 .menu-list ul a{
     text-decoration: none;
+    color:var(--light-blue);
 }
 
 .hero{
@@ -146,24 +150,29 @@
 }
 
 .labs-logos{
-    background-color: #1f3e72;
     height: 150px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
+.labs-logos  img{
+    width: 90%;
+}
 .section-separation-top{
     margin-top: 80px;
 }
 
-.should-vaccine{
+.section-vaccine{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.should-vaccine-copy{
+.section-vaccine-copy{
     grid-column:1/2;
     font-size: 1.1em;
 }
-.should-vaccine h3{
+.section-vaccine h3{
     color: var(--dark-blue);
     font-size: 1.5em;
 }
@@ -174,17 +183,21 @@
     display: flex;
     gap: 2em;
 }
+.vaccine-pros img{
+    width: 50px;
+    height: 50px;
+}
 
-.vaccine-preparation{
+.even-columns{
     display: flex;
     width: 100%;
 }
 
-.img-vaccine-preparation{
+.img-even-columns{
     align-self: flex-end;
     width:1200px;
 }
-.img-vaccine-preparation img{
+.img-even-columns img{
     width: 100%;
 }
 
@@ -223,8 +236,105 @@
 }
 .item-accordeon-title img{
     margin-right:20px ;
+    width: 30px;
+    height: 30px;
 }
 
 .accordion-item .accordeon-body{
     padding: 1em 2em;
+}
+
+.section-info-emergency{
+    grid-column: 1/2;
+}
+
+.actions-emergency-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1em;
+}
+.action-card{
+    border:solid #dee9fc 1px;
+    padding: 1em;
+}
+.action-card .card-body{
+    display: flex;
+    align-items: center;
+}
+.card-body h3{
+    color:var(--dark-blue)
+}
+
+.action-card img{
+    width: 50px;
+    height: 50px;
+}
+.action-card .bt-action{
+    margin-top: 1.5em;
+    width: 100%;
+}
+
+.bt-emergency{
+    cursor: pointer;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    width: 100%;
+    font-weight: 700;
+    color: var(--dark-blue);
+    background-color: #dcf5ff;
+}
+.bt-emergency:hover{
+    color: #ffffff;
+    background-color: var(--dark-blue);
+    box-shadow: #1f3e72 1px 5px 3px;
+}
+
+footer{
+    background-color: #ced9eb;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    margin-top: 5em;
+}
+
+.footer-columns{
+    padding-bottom: 3em;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info{
+    width: 150px;
+}
+
+.interested-info{
+    display: flex;
+    gap: 4em;
+}
+
+.info-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.info-list a{
+    color: var(--dark-blue);
+    text-decoration: none;
+}
+
+.about-company{
+    color: var(--dark-blue);
+    display: flex;
+    justify-content:space-between;
+}
+.copyright{
+    justify-self: start;
+}
+
+.legal-section{
+    display: flex;
+    gap: 2em;
 }
