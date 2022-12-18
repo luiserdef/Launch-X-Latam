@@ -68,6 +68,7 @@ const operators = {
     '-': function(a, b) { return a - b },
     '*': function(a, b) { return a * b },
     '/': function(a, b) { return a / b },
+    '%': function(a, b) { return a % b },
 };
 
 function addOperation (text){
@@ -82,10 +83,8 @@ function resultOpe (){
     const finalOperation = operations.split(operator)
 
     result.textContent = operators[operator](finalOperation[0],finalOperation[1])
-    console.log(operators[operator](finalOperation[0],finalOperation[1]))
-    // if(opers.includes(...operToA)){
-    //     console.log("es true")
-    // }
+
+
     console.log("reultado: "+operator)
     console.log("reultado: "+operations)
 }

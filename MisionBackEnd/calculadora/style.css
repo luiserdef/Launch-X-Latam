@@ -30,6 +30,20 @@ body{
     background-color: antiquewhite;
 }
 
+#result{
+    position: absolute;
+    font-size: 2em;
+    right: 0;
+    bottom: 0;
+}
+
+#process{
+    position: absolute;
+    font-size: 2em;
+    right: 0;
+    top: 0;
+}
+
 .calculator-body{
     width: 100%;
     height: 100%;
@@ -46,18 +60,4 @@ body{
 
 button:hover{
     cursor: pointer;
-}
-
-#result{
-    position: absolute;
-    font-size: 2em;
-    right: 0;
-    bottom: 0;
-}
-
-#process{
-    position: absolute;
-    font-size: 2em;
-    right: 0;
-    top: 0;
 }
