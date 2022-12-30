@@ -7,4 +7,4 @@ Practicas del proyecto Launch X
 [Práctica Javascript](https://dapper-jelly-564587.netlify.app/misionfrontend/4-javascript/main)
 
 ## Misión Backend
-[Calculadora - Vanilla](https://github.com/luiserdef/Launch-X-Latam/tree/main/MisionBackEnd/calculadora)
+[Calculadora - Vanilla JS](https://github.com/luiserdef/Launch-X-Latam/tree/main/MisionBackEnd/calculadora)
