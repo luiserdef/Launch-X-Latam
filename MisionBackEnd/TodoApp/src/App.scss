@@ -1,20 +1,55 @@
 .App{
-  width: 600px;
+  width: 300px;
   height: 600px;
 }
 
+$pinkcolor: #d60084;
+$bluecolor: #006eff;
+
 .container{
+  width: 80%;
   padding: .5em;
 }
 .todo-box{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   border-radius:10px;
-  background-color: #006eff;
+  background-color: $bluecolor;
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
 }
 
-.bt-add{
-  background-color: #3d9645;
-  border: none;
+.card{
+  padding: 5px .5em;
+  border-radius: 10px;
+  color: #006eff;
+  background-color: #ffffff;
+}
+
+
+form{
+  display: flex;
+  gap: 1em;
+  input [type=text]{
+    padding: 1em;
+    outline: none;
+  }
+}
+
+button {
+  background-color:$pinkcolor;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  p{
+    margin-left: 1em;
+  }
 }

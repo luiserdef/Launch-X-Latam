@@ -1,11 +1,23 @@
 import React from "react";
 
-const FormTodo = ()=>{
+const FormTodo = (props)=>{
+
+    const handleItemTodo = (e) =>{
+        e.preventDefault()
+        props.addTask()
+    }
+
     return(
     <>
-        <form action="submit">
-            <input type="text" placeholder="Inserte"/>
-            <button className="bt-add">Agregar</button>
+        <form>
+            <input 
+            onChange={(e)=>props.setTodoItem(e.target.value)} 
+            className ="input-todo" 
+            type="text" 
+            value={props.todoItem}
+            placeholder="Inserte Tarea"/>
+            
+            <button onClick={(e)=>handleItemTodo(e)} className="bt-add">Agregar Tarea</button>
         </form>
     </>
     )
