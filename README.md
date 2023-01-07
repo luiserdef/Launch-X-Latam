@@ -11,4 +11,6 @@ Versión demo en Netlify
 ## Misión Backend
 [Calculadora - Vanilla JS](https://dapper-jelly-564587.netlify.app/misionbackend/calculadora/)
 
+[Pokédex React](https://dapper-jelly-564587.netlify.app/misionbackend/pokedex/dist/index.html)
+
 [TodoApp React](https://dapper-jelly-564587.netlify.app/misionbackend/todoapp/public/index.html)
