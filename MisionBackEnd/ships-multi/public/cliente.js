@@ -131,6 +131,65 @@ function startMultiplayer(){
             socket.emit('check-players')
         }
     })
-}
 
+    socket.on('player-connection',num=>{
+        console.log('jugador ' + num + ' se ha conectado')
+        playerIsConnected()
+    })
+
+    socket.on('enemy-ready',num=>{
+        enemyReady = True
+        playerReady(num)
+        if(ready){
+            setupButton.style.display = 'none'
+        }
+    })
+
+    socket.on('check-players',players =>{
+        players.forEach(p,i=>{
+            if(p.connected) playersIsConnected(i)
+            if(p.ready){
+                playerReady(i)
+                if(i !== playerReady) enemyReady = True
+            }
+        })
+    })
+
+    socket.on('timeout',()=>{
+        infoDisplay.innerHTML = "Te has pasado el tiempo de espera"
+    })
+
+    startButton.addEventListener('click',()=>{
+        if(allShipPlaced){
+            console.log('comienza el juego')
+        }else{
+            infoDisplay.innerHTML = 'Por favor colocar todos los barcos'
+        }
+
+    })
+
+    cpuSquares.forEach(square=>{
+        square.addEventListener('click',()=>{
+            if(currentPlayer ==='user' && ready && enemyReady){
+                shotsFired = square.dataset.id
+                socket.emit('fire',shotsFired)
+            }
+        })
+    })
+
+        socket.on('fire,')
+
+
+    function playerReady(num){
+        let player = `.p ${parseInt(num)+1}`
+        document.querySelector(`${player}.ready`).classList.toggle('active')
+    }
+}
+function playerIsConnected(num){
+    let player = `.p ${parseInt(num)+1}`
+    document.querySelector(`${player}. connected`).classList.toggle('active')
+
+    if(parseInt(num)===playerNum)
+        document.querySelector(player).style.fontWeight = 'bold'
+}
 })
