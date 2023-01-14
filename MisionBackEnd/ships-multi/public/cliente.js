@@ -92,6 +92,21 @@ function startSingleplayer(){
 
 }
 
+function playGameSingles(){
+    if(isGameOver) return 
+    if(currentPlayer === 'user'){
+        turnDisplay.innerHTML = 'Your Go'
+        computerSquares.forEach(square =>square.addEventListener('click',(e)=>{
+            shotsFired = square.dataset.id
+            revealSquare(square.classList)
+        }))
+    }
+    if(currentPlayer === 'enemy'){
+        turnDisplay.innerHTML = 'turno enemigo'
+        setTimeout(enemyGo,1000)
+    }
+}
+
 function generar (){
     let randomDirection = Math.floor(Math.random()*ship.directions.length)
     let current = ship.directions[randomDirection]
@@ -102,6 +117,20 @@ function generar (){
 
     const isAtRightEdge = current.some(index => (index)%width === width - 1)
     const isAtLeftEdge = current.some(index => (index)%width === width - 1)
+}
+
+function startMultiplayer(){
+    const socket = io()
+    socket.on('player-number',num=>{
+        if(number ===-1){
+            infoDisplay.innerHTML = 'Servidor lleno'
+        }else{
+            playerNum=parseInt(num)
+            if(playerNum ='enemy') currentPlayer = "enemy "
+            console.log(playerNum)
+            socket.emit('check-players')
+        }
+    })
 }
 
 })
