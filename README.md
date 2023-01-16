@@ -1,7 +1,7 @@
 # Launch-X-Latam
 Practicas del proyecto Launch X.
 
-Versión demo en Netlify
+Deploy en Netlify
 
 ## Misión FrontEnd 
 [Práctica CSS](https://dapper-jelly-564587.netlify.app/misionfrontend/3-css/main)
