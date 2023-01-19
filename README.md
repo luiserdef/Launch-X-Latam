@@ -1,5 +1,5 @@
 # Launch-X-Latam
-Practicas del proyecto Launch X.
+Practicas del proyecto Launch X LATAM.
 
 Deploy en Netlify
 
